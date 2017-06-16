@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+     <meta name="autor" content ="Kimberly">
+     <meta name="description" content="Ejercicio carrusel en clase">
+     <title>carrusel</title>
+     <h1 align="center">CARRUSEL DE FOTOS AURORAS BOREALES</h1>
+</head>
+
+<body color ="#FFFFFF">
+  <table width="50%" border="1" align="center">
+   <tr>
+
+      <td width="30%" align="right" height="400">
+        <font color="#0033CC">
+        <b> <a href="javascript:carrusel(-1)">ANTERIOR</a> </b>
+        </font>
+      </td>
+
+      <td align="center" width="200" height="347">
+      <img id="imagen" src="images/img1.jpg" height="250">
+      </td>
+
+      <td width="30%" height="400">
+        <font color="#0033CC">
+        <b> <a href="javascript:carrusel(1)">SIGUIENTE</a> </b>
+        </font>
+      </td>
+
+      </tr>
+  </table>
+   
+  </body>
+
+  <script type="text/javascript">
+      
+       var lista = new Array('img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg', 'img7.jpg', 'img8.jpg', 'img9.jpg', "img10.jpg");
+       var cont =0;
+      function carrusel (valor){       
+         cont += valor;
+
+         if(cont <=0){
+            cont = (lista.length-1);
+            document.images.imagen.src="images/"+lista[cont];
+         }
+        else if(cont>=(lista.length)){
+                  cont=0;
+                 document.images.imagen.src="images/"+lista[cont];
+              }
+       else {
+          document.images.imagen.src="images/"+lista[cont];
+        }
+    }
+
+  </script>
+</html>
