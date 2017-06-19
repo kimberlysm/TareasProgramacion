@@ -1,0 +1,46 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title>TiendaOnline</title>
+	<meta name= "author" content="Kimberly">
+	<meta name= "description" content="Prueba2 TiendaOnline">
+	<meta keyword ="Chicharron">
+</head>
+
+<body>
+<header><center><h1>RESTAURANT YAVIRAC, TODOS LOS PLATOS A $0.75 </h1></center></header>
+<section>
+	
+	<center><table>
+		<tr>
+			<td>
+				<img id="imagenPrincipal" src="chicharron.jpg" height="200" width="250"/>
+			</td>
+			<td>
+				<label># chicharrones:</label><br>
+				<input type="number" id= "chicharrones" onchange="sumarPlatos()" onkeyup="cambiarChicharron()"></input><br>
+				<label>#guatitas:</label><br>
+				<input type="number" id="guatitas" onchange="sumarPlatos()" onkeyup="cambiarGuatita()"></input><br>
+				<label>Total de platos</label><br>
+				<input type="number" id="total"></input>
+			</td>
+		</tr>
+	</table></center>
+</section>
+
+</body>
+
+<script type="text/javascript">
+	function sumarPlatos() {
+		document.getElementById('total').value=(parseInt(document.getElementById('chicharrones').value)+(parseInt(document.getElementById('guatitas').value)));
+	}
+
+	function cambiarChicharron(){
+		document.images.imagenPrincipal.src="chicharron.jpg";
+	}
+
+	function cambiarGuatita(){
+		document.images.imagenPrincipal.src="guatitas.jpg";
+	}
+</script>
+</html>
