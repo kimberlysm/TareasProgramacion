@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>    
+   	<center><span id="fotos"><img src="feliz.png" width="100" height="100" onmouseover="CambiarImagen(1)" onmouseout="RegresarImagen(1)" ><img src="triste.jpg" width="100" height="100" onmouseover="CambiarImagen(2)" onmouseout=" RegresarImagen(2)"><img src="asustado.jpg" width="100" height="100" onmouseover="CambiarImagen(3)" onmouseout="RegresarImagen(3)"></span>
+   </center>
+</body>
+<script type="text/javascript">
+	function CambiarImagen(valor) {
+		  if (valor==1)
+        document.getElementById('fotos').childNodes[0].src='enojada.jpg';
+     else  if (valor==2)
+      document.getElementById('fotos').childNodes[1].src='enojada.jpg';
+    else if (valor==3)
+    document.getElementById('fotos').childNodes[2].src='enojada.jpg';
+	}
+  function RegresarImagen(valor) {
+     if (valor==1)
+        document.getElementById('fotos').childNodes[0].src='feliz.png';
+     else  if (valor==2)
+      document.getElementById('fotos').childNodes[1].src='triste.jpg';
+    else if (valor==3)
+    document.getElementById('fotos').childNodes[2].src='asustado.jpg';
+  }
+
+</script>
+</html>
